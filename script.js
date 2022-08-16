@@ -7,6 +7,7 @@ let year = document.querySelector('.year')
 let currentYear = new Date();
 year.innerHTML = currentYear.getFullYear();
 let name = prompt('What is your name?')
+name.toLowerCase();
 
 
 let humanCount = 0;

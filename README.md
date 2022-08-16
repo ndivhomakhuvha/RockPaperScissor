@@ -14,3 +14,6 @@ now using that:
 return arr[randomNumber]
 `
 which will return various selection on every refresh.
+
+For this project i used Vanilla JS, Some tailwind CSS For posiitioning my elements,
+and also plain HTML.

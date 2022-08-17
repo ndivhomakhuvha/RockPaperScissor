@@ -12,8 +12,8 @@ year.innerHTML = currentYear.getFullYear();
 humanName.innerHTML = 'You'
 
 let name = prompt('What is your name?')
-
-humanName.innerHTML = name;
+let lowCaseName = name.toLowerCase()
+humanName.innerHTML = lowCaseName;
 humanDiv.innerHTML = '🤔';
 computerDiv.innerHTML = '🤔';
 let humanCount = 0;
@@ -42,11 +42,11 @@ function game(humanChoice, computerChoice) {
 
         pHuman.innerHTML = humanCount;
 
-        finalScore.innerHTML = `${name}  Wins this round `
+        finalScore.innerHTML = `${lowCaseName}  Wins this round `
         humanDiv.innerHTML = humanChoice;
         computerDiv.innerHTML = computerChoice;
         if (humanCount == 5) {
-            finalScore.innerHTML = `${name} won the match 🎉`
+            finalScore.innerHTML = `${lowCaseName} won the match 🎉`
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
@@ -81,9 +81,10 @@ function newGame() {
 
     humanName.innerHTML = 'You'
     name = prompt('What is your name?')
+    lowCaseName = name.toLowerCase()
     humanDiv.innerHTML = '🤔';
     computerDiv.innerHTML = '🤔';
-    humanName.innerHTML = name;
+    humanName.innerHTML = lowCaseName;
     paperButton.disabled = false;
     rockButton.disabled = false;
     scissorButton.disabled = false;

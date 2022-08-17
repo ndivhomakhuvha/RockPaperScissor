@@ -1,4 +1,9 @@
 //Declaring all variables that i will use
+let paperButton = document.querySelector('.paper')
+let rockButton = document.querySelector('.rock')
+let scissorButton = document.querySelector('.scissor')
+let humanCount = 0;
+let computerCount = 0;
 let pHuman = document.querySelector('.humanScore')
 let pComputer = document.querySelector('.computerScore')
 let finalScore = document.querySelector('.finalScore')
@@ -12,16 +17,14 @@ year.innerHTML = currentYear.getFullYear();
 humanName.innerHTML = 'You'
 
 let name = prompt('What is your name?')
+
+
+
+
 let lowCaseName = name.toLowerCase()
 humanName.innerHTML = lowCaseName;
 humanDiv.innerHTML = '🤔';
 computerDiv.innerHTML = '🤔';
-let humanCount = 0;
-let computerCount = 0;
-
-let paperButton = document.querySelector('.paper')
-let rockButton = document.querySelector('.rock')
-let scissorButton = document.querySelector('.scissor')
 
 //Computer play function
 

@@ -13,17 +13,30 @@
 <body>
 
   <p class="finalScore font-black text-center mt-10 text-4xl fle justify-centerx"></p>
-  <div class="flex justify-center text-center space-x-20  relative top-28">
-    <p class="text-3xl  font-semibold flex flex-col">You <strong class="humanScore ">0</strong></p>
-    <p class="text-3xl font-semibold flex flex-col">Computer <strong class="computerScore">0</strong></p>
+  <div class="flex flex-row justify-center space-x-10 mt-28">
+    <div class="bg-slate-300 h-24 w-24 humanDiv text-4xl flex justify-center items-center rounded-lg "></div>
+    <div class=" bg-slate-300 h-24 w-24 ComputerDiv text-4xl flex justify-center items-center rounded-lg"></div>
+  </div>
+
+
+  <div class="flex justify-center text-center space-x-20 flex-row  relative top-20">
+    <div class="flex flex-col">
+      <p class="text-3xl  font-semibold flex flex-col humanName">You</p>
+      <strong class="humanScore text-3xl ">0</strong>
+    </div>
+    <div class="flex flex-col ">
+      <p class="text-3xl font-semibold flex flex-col">AI💻 </p>
+      <strong class="computerScore text-3xl">0</strong>
+    </div>
+
   </div>
   <div class="flex justify-center space-x-3 mt-40 ">
-    <button value="rock" class="rock  w-24 h-10" onclick="rock()">rock</button>
-    <button value="paper" class="paper  w-24 h-10" onclick="paper()">paper</button>
-    <button value="scissor" class="scissor  w-24 h-10" onclick="scissor()">scissor</button>
+    <button value="🪨" class="rock  w-28 h-11" onclick="rock()">rock</button>
+    <button value="📄" class="paper  w-28 h-11" onclick="paper()">paper</button>
+    <button value="✂️" class="scissor  w-28 h-11" onclick="scissor()">scissor</button>
   </div>
   <div class="flex justify-center mt-5">
-    <button class="restart">Restart</button>
+    <button class="restart w-28 h-11">Restart</button>
   </div>
   <footer class="fixed bottom-0 align-middle w-full">
     <p class="text-center font-semibold"> Copyright <strong class="year"></strong></p>

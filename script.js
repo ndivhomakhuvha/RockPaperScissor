@@ -3,13 +3,19 @@ let pHuman = document.querySelector('.humanScore')
 let pComputer = document.querySelector('.computerScore')
 let finalScore = document.querySelector('.finalScore')
 let restartButton = document.querySelector('.restart')
+let humanName = document.querySelector('.humanName')
+let humanDiv = document.querySelector('.humanDiv')
+let computerDiv = document.querySelector('.ComputerDiv')
 let year = document.querySelector('.year')
 let currentYear = new Date();
 year.innerHTML = currentYear.getFullYear();
+humanName.innerHTML = 'You'
+
 let name = prompt('What is your name?')
 
-
-
+humanName.innerHTML = name;
+humanDiv.innerHTML = '🤔';
+computerDiv.innerHTML = '🤔';
 let humanCount = 0;
 let computerCount = 0;
 
@@ -20,7 +26,7 @@ let scissorButton = document.querySelector('.scissor')
 //Computer play function
 
 function computer() {
-    let arr = ['rock', 'paper', 'scissor'];
+    let arr = ['🪨', '📄', '✂️'];
     let arrRandom = Math.floor(Math.random() * arr.length);
     return arr[arrRandom];
 }
@@ -29,13 +35,16 @@ function computer() {
 //Game function
 function game(humanChoice, computerChoice) {
 
-    if ((humanChoice == 'rock' && computerChoice == 'scissor') ||
-        (humanChoice == 'scissor' && computerChoice == 'paper') ||
-        (humanChoice == 'paper' && computerChoice == 'rock')) {
+    if ((humanChoice == '🪨' && computerChoice == '✂️') ||
+        (humanChoice == '✂️' && computerChoice == '📄') ||
+        (humanChoice == '📄' && computerChoice == '🪨')) {
         humanCount++;
 
         pHuman.innerHTML = humanCount;
-        finalScore.innerHTML = `${name}  Wins , ${name} : "${humanChoice}" over Computer : "${computerChoice}"`
+
+        finalScore.innerHTML = `${name}  Wins this round `
+        humanDiv.innerHTML = humanChoice;
+        computerDiv.innerHTML = computerChoice;
         if (humanCount == 5) {
             finalScore.innerHTML = `${name} won the match 🎉`
             paperButton.disabled = true;
@@ -45,13 +54,16 @@ function game(humanChoice, computerChoice) {
         }
 
     } else if (humanChoice == computerChoice) {
-        finalScore.innerHTML = `Its a tie 👔 , ${name}: "${humanChoice}" & Computer : "${computerChoice}"`;
+        computerDiv.innerHTML = computerChoice;
+        humanDiv.innerHTML = humanChoice;
+        finalScore.innerHTML = `Its a tie 👔 `;
     } else {
         finalScore.innerHTML = ''
         computerCount++;
         pComputer.innerHTML = computerCount;
-
-        finalScore.innerHTML = `Computer Wins , Computer :  "${computerChoice}" over ${name} : "${humanChoice}"`
+        humanDiv.innerHTML = humanChoice;
+        computerDiv.innerHTML = computerChoice;
+        finalScore.innerHTML = `Computer Wins this round`
         if (computerCount == 5) {
             finalScore.innerHTML = 'Computer won the match 🎉'
             paperButton.disabled = true;
@@ -66,8 +78,12 @@ function game(humanChoice, computerChoice) {
 restartButton.addEventListener('click', newGame)
 
 function newGame() {
-    name = prompt('What is your name?')
 
+    humanName.innerHTML = 'You'
+    name = prompt('What is your name?')
+    humanDiv.innerHTML = '🤔';
+    computerDiv.innerHTML = '🤔';
+    humanName.innerHTML = name;
     paperButton.disabled = false;
     rockButton.disabled = false;
     scissorButton.disabled = false;

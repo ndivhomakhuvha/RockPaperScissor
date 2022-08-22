@@ -13,10 +13,14 @@
 <body>
 
   <p class="finalScore font-black text-center mt-10 text-4xl fle justify-centerx"></p>
-  <div class="flex flex-row justify-center space-x-10 mt-28">
-    <div class="bg-slate-300 h-24 w-24 humanDiv text-4xl flex justify-center items-center rounded-lg "></div>
-    <div class=" bg-slate-300 h-24 w-24 ComputerDiv text-4xl flex justify-center items-center rounded-lg"></div>
+  <p class="currentWinner text-center mt-5 text-2xl"></p>
+
+  <div class="flex flex-row justify-center space-x-5 mt-28">
+    <div class="bg-slate-100 h-24 w-32 humanDiv text-4xl flex justify-center items-center rounded-lg "></div>
+    <div class=" bg-slate-100 h-24 w-32 ComputerDiv text-4xl flex justify-center items-center rounded-lg"></div>
   </div>
+
+
 
 
   <div class="flex justify-center text-center space-x-20 flex-row  relative top-20">
@@ -25,13 +29,13 @@
       <strong class="humanScore text-3xl ">0</strong>
     </div>
     <div class="flex flex-col ">
-      <p class="text-3xl font-semibold flex flex-col">AI💻 </p>
+      <p class="text-3xl font-semibold flex flex-col">💻 </p>
       <strong class="computerScore text-3xl">0</strong>
     </div>
 
   </div>
   <div class="flex justify-center space-x-3 mt-40 ">
-    <button value="🪨" class="rock  w-28 h-11" onclick="rock()">rock</button>
+    <button value="🪨" class="rock  w-28 h-11 " onclick="rock()">rock</button>
     <button value="📄" class="paper  w-28 h-11" onclick="paper()">paper</button>
     <button value="✂️" class="scissor  w-28 h-11" onclick="scissor()">scissor</button>
   </div>

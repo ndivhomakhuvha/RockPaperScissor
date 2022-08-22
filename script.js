@@ -11,6 +11,7 @@ let restartButton = document.querySelector('.restart')
 let humanName = document.querySelector('.humanName')
 let humanDiv = document.querySelector('.humanDiv')
 let computerDiv = document.querySelector('.ComputerDiv')
+let currentWin = document.querySelector('.currentWinner')
 let year = document.querySelector('.year')
 let currentYear = new Date();
 year.innerHTML = currentYear.getFullYear();
@@ -44,8 +45,9 @@ function game(humanChoice, computerChoice) {
         humanCount++;
 
         pHuman.innerHTML = humanCount;
-
-        finalScore.innerHTML = `${lowCaseName}  Wins this round `
+        currentWin.innerHTML = `${humanChoice} beats ${computerChoice}`
+        finalScore.innerHTML = `👤  Wins this round `
+       
         humanDiv.innerHTML = humanChoice;
         computerDiv.innerHTML = computerChoice;
         if (humanCount == 5) {
@@ -60,15 +62,17 @@ function game(humanChoice, computerChoice) {
         computerDiv.innerHTML = computerChoice;
         humanDiv.innerHTML = humanChoice;
         finalScore.innerHTML = `Its a tie 👔 `;
+        currentWin.innerHTML = `${humanChoice} is the same as${computerChoice}`
     } else {
         finalScore.innerHTML = ''
         computerCount++;
+        currentWin.innerHTML = `${computerChoice} beats ${humanChoice}`
         pComputer.innerHTML = computerCount;
         humanDiv.innerHTML = humanChoice;
         computerDiv.innerHTML = computerChoice;
-        finalScore.innerHTML = `Computer Wins this round`
+        finalScore.innerHTML = `💻  Wins this round`
         if (computerCount == 5) {
-            finalScore.innerHTML = 'Computer won the match 🎉'
+            finalScore.innerHTML = '💻  won the match 🎉'
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
@@ -80,7 +84,8 @@ function game(humanChoice, computerChoice) {
 }
 restartButton.addEventListener('click', newGame)
 
-function newGame() {
+function newGame() { 
+    currentWin.innerHTML = ''
 
     humanName.innerHTML = 'You'
     name = prompt('What is your name?')

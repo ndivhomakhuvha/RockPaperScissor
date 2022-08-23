@@ -19,13 +19,14 @@ humanName.innerHTML = 'You'
 
 let name = prompt('What is your name?')
 
+let nameLength = name.length;
+let newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
 
 
 
-let lowCaseName = name.toLowerCase()
-humanName.innerHTML = lowCaseName;
-humanDiv.innerHTML = '🤔';
-computerDiv.innerHTML = '🤔';
+humanName.innerHTML = newName;
+humanDiv.innerHTML = '?';
+computerDiv.innerHTML = '?';
 
 //Computer play function
 
@@ -47,11 +48,11 @@ function game(humanChoice, computerChoice) {
         pHuman.innerHTML = humanCount;
         currentWin.innerHTML = `${humanChoice} beats ${computerChoice}`
         finalScore.innerHTML = `👤  Wins this round `
-       
+
         humanDiv.innerHTML = humanChoice;
         computerDiv.innerHTML = computerChoice;
         if (humanCount == 5) {
-            finalScore.innerHTML = `${lowCaseName} won the match 🎉`
+            finalScore.innerHTML = `${newName} won the match 🎉`
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
@@ -84,15 +85,15 @@ function game(humanChoice, computerChoice) {
 }
 restartButton.addEventListener('click', newGame)
 
-function newGame() { 
+function newGame() {
     currentWin.innerHTML = ''
-
     humanName.innerHTML = 'You'
     name = prompt('What is your name?')
-    lowCaseName = name.toLowerCase()
-    humanDiv.innerHTML = '🤔';
-    computerDiv.innerHTML = '🤔';
-    humanName.innerHTML = lowCaseName;
+    nameLength = name.length;
+    newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
+    humanDiv.innerHTML = '?';
+    computerDiv.innerHTML = '?';
+    humanName.innerHTML = newName;
     paperButton.disabled = false;
     rockButton.disabled = false;
     scissorButton.disabled = false;

@@ -12,16 +12,14 @@ let humanName = document.querySelector('.humanName')
 let humanDiv = document.querySelector('.humanDiv')
 let computerDiv = document.querySelector('.ComputerDiv')
 let currentWin = document.querySelector('.currentWinner')
-let year = document.querySelector('.year')
-let currentYear = new Date();
-year.innerHTML = currentYear.getFullYear();
+
+
 humanName.innerHTML = 'You'
 
 let name = prompt('What is your name?')
 
 let nameLength = name.length;
 let newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
-
 
 
 humanName.innerHTML = newName;
@@ -31,7 +29,7 @@ computerDiv.innerHTML = '?';
 //Computer play function
 
 function computer() {
-    let arr = ['🪨', '📄', '✂️'];
+    let arr = ['👊🏿', '📄', '✌🏿'];
     let arrRandom = Math.floor(Math.random() * arr.length);
     return arr[arrRandom];
 }
@@ -40,9 +38,9 @@ function computer() {
 //Game function
 function game(humanChoice, computerChoice) {
 
-    if ((humanChoice == '🪨' && computerChoice == '✂️') ||
-        (humanChoice == '✂️' && computerChoice == '📄') ||
-        (humanChoice == '📄' && computerChoice == '🪨')) {
+    if ((humanChoice == '👊🏿' && computerChoice == '✌🏿') ||
+        (humanChoice == '✌🏿' && computerChoice == '📄') ||
+        (humanChoice == '📄' && computerChoice == '👊🏿')) {
         humanCount++;
 
         pHuman.innerHTML = humanCount;
@@ -91,6 +89,7 @@ function newGame() {
     name = prompt('What is your name?')
     nameLength = name.length;
     newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
+    currentWin.innerHTML = 'First person to get to score of 5 wins..'
     humanDiv.innerHTML = '?';
     computerDiv.innerHTML = '?';
     humanName.innerHTML = newName;

@@ -12,7 +12,7 @@ let humanName = document.querySelector('.humanName')
 let humanDiv = document.querySelector('.humanDiv')
 let computerDiv = document.querySelector('.ComputerDiv')
 let currentWin = document.querySelector('.currentWinner')
-
+restartButton.style.display = 'none'
 
 humanName.textContent = 'You'
 

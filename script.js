@@ -59,7 +59,7 @@ function game(humanChoice, computerChoice) {
             rockButton.style.display = 'none'
             scissorButton.style.display = 'none'
             restartButton.style.display = 'block';
-           
+
 
         }
 
@@ -94,18 +94,20 @@ function game(humanChoice, computerChoice) {
 restartButton.addEventListener('click', newGame)
 
 function newGame() {
+
     paperButton.style.display = 'block'
     rockButton.style.display = 'block'
     scissorButton.style.display = 'block'
     currentWin.textContent = ''
+
     restartButton.style.display = 'none'
     humanName.textContent = 'You'
     name = prompt('What is your name?')
     nameLength = name.length;
     newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
-    currentWin.textContent = "First person to get to score of 5\nWins.";
     humanDiv.textContent = '?';
     computerDiv.textContent = '?';
+    currentWin.textContent = "Let's go again ";
     humanName.textContent = newName;
     paperButton.disabled = false;
     rockButton.disabled = false;
@@ -115,8 +117,6 @@ function newGame() {
     humanCount = 0;
     computerCount = 0;
     finalScore.textContent = '';
-
-
 }
 
 function paper() {

@@ -38,17 +38,14 @@
     display: none;
     height: 40px;
     width: 100px;
-    background-color: red;
+    background-color: rgb(185, 0, 0);
     color: white;
     border-radius: 5px;
     font-family: 'Mukta', cursive;
     font-weight: 900;
 
 }
-.logo{
-    font-size: 20px;
-    font-weight: 900;
-}
+
 span{
-    color: red;
+    color: rgb(0, 133, 190);
 }

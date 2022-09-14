@@ -14,7 +14,7 @@ let computerDiv = document.querySelector('.ComputerDiv')
 let currentWin = document.querySelector('.currentWinner')
 
 
-humanName.innerHTML = 'You'
+humanName.textContent = 'You'
 
 let name = prompt('What is your name?')
 
@@ -23,9 +23,9 @@ let nameLength = name.length;
 let newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
 
 
-humanName.innerHTML = newName;
-humanDiv.innerHTML = '?';
-computerDiv.innerHTML = '?';
+humanName.textContent = newName;
+humanDiv.textContent = '?';
+computerDiv.textContent = '?';
 
 //Computer play function
 
@@ -44,14 +44,14 @@ function game(humanChoice, computerChoice) {
         (humanChoice == '📄' && computerChoice == '👊🏿')) {
         humanCount++;
 
-        pHuman.innerHTML = humanCount;
-        currentWin.innerHTML = `${humanChoice} beats ${computerChoice}`
-        finalScore.innerHTML = `👤  Wins this round `
+        pHuman.textContent = humanCount;
+        currentWin.textContent = `${humanChoice} beats ${computerChoice}`
+        finalScore.textContent = `👤  Wins this round `
 
-        humanDiv.innerHTML = humanChoice;
-        computerDiv.innerHTML = computerChoice;
+        humanDiv.textContent = humanChoice;
+        computerDiv.textContent = computerChoice;
         if (humanCount == 5) {
-            finalScore.innerHTML = `${newName} won the match 🎉`
+            finalScore.textContent = `${newName} won the match 🎉`
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
@@ -64,20 +64,20 @@ function game(humanChoice, computerChoice) {
         }
 
     } else if (humanChoice == computerChoice) {
-        computerDiv.innerHTML = computerChoice;
-        humanDiv.innerHTML = humanChoice;
-        finalScore.innerHTML = `Its a tie 👔 `;
-        currentWin.innerHTML = `${humanChoice} is the same as${computerChoice}`
+        computerDiv.textContent = computerChoice;
+        humanDiv.textContent = humanChoice;
+        finalScore.textContent = `Its a tie 👔 `;
+        currentWin.textContent = `${humanChoice} is the same as${computerChoice}`
     } else {
-        finalScore.innerHTML = ''
+        finalScore.textContent = ''
         computerCount++;
-        currentWin.innerHTML = `${computerChoice} beats ${humanChoice}`
-        pComputer.innerHTML = computerCount;
-        humanDiv.innerHTML = humanChoice;
-        computerDiv.innerHTML = computerChoice;
-        finalScore.innerHTML = `💻  Wins this round`
+        currentWin.textContent = `${computerChoice} beats ${humanChoice}`
+        pComputer.textContent = computerCount;
+        humanDiv.textContent = humanChoice;
+        computerDiv.textContent = computerChoice;
+        finalScore.textContent = `💻  Wins this round`
         if (computerCount == 5) {
-            finalScore.innerHTML = '💻  won the match 🎉'
+            finalScore.textContent = '💻  won the match 🎉'
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
@@ -97,24 +97,24 @@ function newGame() {
     paperButton.style.display = 'block'
     rockButton.style.display = 'block'
     scissorButton.style.display = 'block'
-    currentWin.innerHTML = ''
+    currentWin.textContent = ''
     restartButton.style.display = 'none'
-    humanName.innerHTML = 'You'
+    humanName.textContent = 'You'
     name = prompt('What is your name?')
     nameLength = name.length;
     newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
-    currentWin.innerHTML = 'First person to get to score of 5 wins..'
-    humanDiv.innerHTML = '?';
-    computerDiv.innerHTML = '?';
-    humanName.innerHTML = newName;
+    currentWin.textContent = "First person to get to score of 5\nWins.";
+    humanDiv.textContent = '?';
+    computerDiv.textContent = '?';
+    humanName.textContent = newName;
     paperButton.disabled = false;
     rockButton.disabled = false;
     scissorButton.disabled = false;
-    pComputer.innerHTML = '0'
-    pHuman.innerHTML = '0'
+    pComputer.textContent = '0'
+    pHuman.textContent = '0'
     humanCount = 0;
     computerCount = 0;
-    finalScore.innerHTML = '';
+    finalScore.textContent = '';
 
 
 }

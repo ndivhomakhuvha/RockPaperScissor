@@ -11,36 +11,38 @@
 </head>
 
 <body class="h-auto" >
-<header class="h-12 w-100 bg-slate-200 flex items-center justify-center space-x-3"><img class="h-7 w-7"  src="https://cdn-icons-png.flaticon.com/512/6688/6688560.png" alt="">RockPaperScissor</header>
+<header class="h-12 w-100 bg-slate-200 flex items-center justify-center space-x-2"><img class="h-7 w-7"  src="https://cdn-icons-png.flaticon.com/512/6688/6688560.png" alt=""> <h1 class="logo">Rock<span>Paper</span>Scissor</h1></header>
   <p class="finalScore font-black text-center mt-10 text-3xl fle justify-centerx"></p>
   <p class="currentWinner mt-8 text-2xl text-center items-center font-black">First to get to score of 5 <br> Wins.</p>
 
   <div class="flex flex-row justify-center space-x-5 mt-24">
-    <div class="bg-slate-50 border h-24 w-32 humanDiv text-4xl flex justify-center items-center rounded-lg "></div>
-    <div class=" bg-slate-50 border h-24 w-32 ComputerDiv text-4xl flex justify-center items-center rounded-lg"></div>
+    <div class="flex flex-col items-center justify-center">
+      <div class="bg-slate-50 border h-24 w-32 humanDiv text-4xl flex justify-center items-center rounded-lg "></div>
+      <div class="flex flex-col items-center justify-center relative top-2 ">
+        <p class="text-3xl  font-semibold flex flex-col humanName">You</p>
+        <strong class="humanScore text-3xl ">0</strong>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+      <div class=" bg-slate-50 border h-24 w-32 ComputerDiv text-4xl flex justify-center items-center rounded-lg"></div>
+      <div class="flex flex-col items-center justify-center relative top-2 ">
+        <p class="text-3xl font-semibold flex flex-col">💻 </p>
+        <strong class="computerScore text-3xl">0</strong>
+      </div>
+  
+    </div>
+   
+   
   </div>
 
 
-
-
-  <div class="flex justify-center text-center space-x-10 flex-row  relative top-20">
-    <div class="flex flex-col">
-      <p class="text-3xl  font-semibold flex flex-col humanName">You</p>
-      <strong class="humanScore text-3xl ">0</strong>
-    </div>
-    <div class="flex flex-col ">
-      <p class="text-3xl font-semibold flex flex-col">💻 </p>
-      <strong class="computerScore text-3xl">0</strong>
-    </div>
-
-  </div>
-  <div class="flex justify-center space-x-2 mt-40 ">
-    <button value="👊🏿" class="rock    w-20 h-9 hover:bg-slate-900 " onclick="rock()">Rock 👊🏿 </button>
+  <div class="flex justify-center space-x-2 mt-20 ">
+    <button value="👊🏿" class="rock    w-20 h-9 " onclick="rock()">Rock 👊🏿 </button>
     <button value="📄" class="paper  w-20 h-9 "  onclick="paper()">Paper 📄</button>
     <button value="✌🏿" class="scissor  w-20 h-9 " onclick="scissor()">Scissor ✌🏿</button>
   </div>
   <div class="flex justify-center mt-2">
-    <button class="restart w-20 h-9">Restart</button>
+    <button class="restart w-20 h-9 hover:bg-red-900sdsd">Restart</button>
   </div>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

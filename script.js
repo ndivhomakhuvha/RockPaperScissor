@@ -18,6 +18,7 @@ humanName.innerHTML = 'You'
 
 let name = prompt('What is your name?')
 
+
 let nameLength = name.length;
 let newName = name[0].toUpperCase() + name.substring(1, nameLength).toLowerCase();
 
@@ -54,6 +55,11 @@ function game(humanChoice, computerChoice) {
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
+            paperButton.style.display = 'none'
+            rockButton.style.display = 'none'
+            scissorButton.style.display = 'none'
+            restartButton.style.display = 'block';
+           
 
         }
 
@@ -75,6 +81,10 @@ function game(humanChoice, computerChoice) {
             paperButton.disabled = true;
             rockButton.disabled = true;
             scissorButton.disabled = true;
+            paperButton.style.display = 'none'
+            rockButton.style.display = 'none'
+            scissorButton.style.display = 'none'
+            restartButton.style.display = 'block';
 
         }
 
@@ -84,7 +94,11 @@ function game(humanChoice, computerChoice) {
 restartButton.addEventListener('click', newGame)
 
 function newGame() {
+    paperButton.style.display = 'block'
+    rockButton.style.display = 'block'
+    scissorButton.style.display = 'block'
     currentWin.innerHTML = ''
+    restartButton.style.display = 'none'
     humanName.innerHTML = 'You'
     name = prompt('What is your name?')
     nameLength = name.length;

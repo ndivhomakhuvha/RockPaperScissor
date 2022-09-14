@@ -4,7 +4,7 @@ For this project i had to figure out how to get the user's input,getting compute
 # Getting Computer Input
 To get the computer input, I used a function <br />
 which has a random Math function like this
-> const arr = ['rock','paper','scissor']
+> const arr = ['rock','paper','scissor'] <br />
 > let randomNumber = Math.floor((Math.random() * arr.length))
 
 randomNumber will then give me <br />

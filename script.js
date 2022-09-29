@@ -67,10 +67,12 @@ function game(humanChoice, computerChoice) {
         computerDiv.textContent = computerChoice;
         humanDiv.textContent = humanChoice;
         finalScore.textContent = `Its a tie 👔 `;
+        navigator.vibrate([200,200]);
         currentWin.textContent = `${humanChoice} is the same as${computerChoice}`
     } else {
         finalScore.textContent = ''
         computerCount++;
+        navigator.vibrate([200]);
         currentWin.textContent = `${computerChoice} beats ${humanChoice}`
         pComputer.textContent = computerCount;
         humanDiv.textContent = humanChoice;

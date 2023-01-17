@@ -7,7 +7,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
- 
+
 }
 
 .finalScore {
@@ -30,13 +30,14 @@
     justify-content: center;
 
 }
-.disabled{
-    background-color: #e0e7ff79 ;
+
+.disabled {
+    background-color: #e0e7ff79;
 }
 
 .restart {
     display: none;
-    
+
     height: 40px;
     width: 100px;
     background-color: rgb(155, 31, 31);
@@ -47,6 +48,6 @@
 
 }
 
-span{
+span {
     color: rgb(0, 133, 190);
 }
